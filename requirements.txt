@@ -52,7 +52,7 @@ importlib-resources==5.4.0
 isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.11.2
-kazam==1.4.5
+
 keyring==18.0.1
 language-selector==0.1
 launchpadlib==1.10.13
