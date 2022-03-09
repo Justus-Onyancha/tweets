@@ -172,11 +172,19 @@ remote:
 
 solution1: $ heroku config:set DISABLE_COLLECTSTATIC=1
 
+again run: $ git push heroku master
+
 **step 13**
 
 run the following command to upgrade databse
 
-heroku run python3 manage.py db upgrade
+1st: $ python3 manage.py db init
+
+2nd: $ python3 manage.py db revision
+
+then:
+
+
 
 
 
