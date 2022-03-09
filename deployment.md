@@ -96,7 +96,7 @@ we still have to set up postgres in heroku
 add following command in terminal:
 heroku addons:create heroku-postgresql:hobby-dev
 
-error to expext with above command:
+error to expect with above command:
 
 heroku addons:create heroku-postgresql:hobby-dev
  ›   Error: Missing required flag:
@@ -119,9 +119,37 @@ heroku addons:create heroku-postgresql:hobby-dev
  we run:
  pip freeze > requirements.txt
 
- step 11:
+ **step 11**:
 
  git add . && git commit -m"fix for deployment"
+
+
+then: 
+ git push origin master 
+
+then:
+
+git push heroku master
+
+expected error :
+
+solution1: https://stackoverflow.com/questions/18406721/heroku-does-not-appear-to-be-a-git-repository
+
+solution2: heroku login
+           heroku git:remote -a yourapp
+
+then repeat: git push heroku master
+
+
+error expected if failed:
+its with dependencies versions, make sure they are the right versions by either upgrading or downgrading the versions for dependencies
+
+
+EDIT AND THEN RUN {  pip install -r requirements.txt  }
+**step 12**
+
+
+
 
 
 
