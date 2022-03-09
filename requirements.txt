@@ -22,7 +22,7 @@ distlib==0.3.0
 distro==1.4.0
 
 Django==4.0.2
-dnspython==2.0.0
+
 dominate==2.5.2
 
 email-validator==1.1.1
