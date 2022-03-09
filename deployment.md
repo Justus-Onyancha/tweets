@@ -50,4 +50,33 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")      <====
 
 
+**step 7**
+
+check if database is initialized in __init__.py
+
+ db.init_app(app)
+
+ then add following line in __init__.py
+
+
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
+    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+    with app.app_context():
+        db.create_all()
+
+    return app
+
+
+**step 8**
+
+add a new file called .env
+  
+    and store data example:
+
+    MAIL_USERNAME = "justus.onyancha@moringaschool.com"
+    MAIL_PASSWORD = "password"
+
+
+
 

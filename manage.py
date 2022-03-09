@@ -5,7 +5,7 @@ from app.models import User, Comment, Pitch, PitchCategory
 
 
 # change this to production on deployment to heroku
-app = create_app('development')
+app = create_app('production')
 
 # added this but can be added to config too to solve secret key error temporarily
 app.config['SECRET_KEY'] = 'any secret string'
