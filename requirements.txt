@@ -20,7 +20,7 @@ dbus-python==1.2.16
 defer==1.0.4
 distlib==0.3.0
 distro==1.4.0
-distro-info===0.23ubuntu1
+
 Django==4.0.2
 dnspython==2.0.0
 dominate==2.5.2
