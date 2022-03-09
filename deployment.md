@@ -62,8 +62,7 @@ check if database is initialized in __init__.py
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
-    with app.app_context():
-        db.create_all()
+   
 
     return app
 
@@ -149,9 +148,35 @@ EDIT AND THEN RUN {  pip install -r requirements.txt  }
 **step 12**
 
 
+Expected error: 
+
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        usage: manage.py [-?] {server,db,test,shell,runserver} ...
+remote:        manage.py: error: argument {server,db,test,shell,runserver}: invalid choice: 'collectstatic' (choose from 'server', 'db', 'test', 'shell', 'runserver')
+remote: 
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote: 
+remote:        You may need to update application code to resolve this error.
+remote:        Or, you can disable collectstatic for this application:
+remote: 
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote: 
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
 
 
+solution1: $ heroku config:set DISABLE_COLLECTSTATIC=1
 
+**step 13**
+
+run the following command to upgrade databse
+
+heroku run python3 manage.py db upgrade
 
 
 
