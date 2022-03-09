@@ -1,5 +1,7 @@
 ***Deployment of IP2 in application***
 
+****EXTRA RESOURCE BY ALBERT BYRONE****
+https://github.com/Albert-Byrone/Deploy_to_Heroku_Flask
 
 **Step 1**
  make sure its working locally without errors
