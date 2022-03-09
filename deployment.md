@@ -21,10 +21,18 @@ destroy one existing heroku if they are many and follow instructions
 
 heroku apps:destroy <flask-movies-app>         flask-movies-app is just an example
 
+
 **step 4**
 create a new heroku app name
 heroku create <app_name>
 
+git add . && git commit -m"deploy"
+git push origin master
+
+then:
+    heroku git:remote -a yourapp
+
+git push heroku master
 **step 5**
 Since the __init__.py in app folder uses config as follows:-
 
