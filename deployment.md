@@ -182,6 +182,16 @@ run the following command to upgrade databse
 
 2nd: $ python3 manage.py db revision
 
+3rd: $ git add . && git commit -m"db initialized locally and revision file created"
+
+4th: $ git push origin master
+
+5th: $ git push heroku master
+
+6th: $ heroku run python3 manage.py db revision
+
+7th: $ heroku run python3 manage.py db upgrade
+
 then:
 
 
