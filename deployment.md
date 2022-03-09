@@ -72,10 +72,58 @@ check if database is initialized in __init__.py
 
 add a new file called .env
   
-    and store data example:
+    and store data example if you are storing email data:
 
     MAIL_USERNAME = "justus.onyancha@moringaschool.com"
     MAIL_PASSWORD = "password"
+
+**Step 9**
+
+if you head to heroku, you will realize the app is there but empty
+
+heroku > new_created_heroku_app > settings > config variable 
+
+you will see the gmail we pushed to .env and its password 
+
+note:they arent in this particular file
+
+**Step 10**
+from thursday content on deployment
+
+we still have to set up postgres in heroku 
+
+
+add following command in terminal:
+heroku addons:create heroku-postgresql:hobby-dev
+
+error to expext with above command:
+
+heroku addons:create heroku-postgresql:hobby-dev
+ ›   Error: Missing required flag:
+ ›    -a, --app APP  app to run command against
+ ›   See more help with --help
+
+ solution:  https://stackoverflow.com/questions/51815542/heroku-missing-required-flag-a
+
+ solution2:
+ 
+ heroku addons:create heroku-postgresql:hobby-dev --app flaskweek2         
+ 
+ //flaskweek2 is the appname in heroku we created in terminal
+
+ Note; if you head back to heroku > appname > settings > reveal configurations > you will see the database url added after that command
+
+
+ **step 10**
+
+ we run:
+ pip freeze > requirements.txt
+
+ step 11:
+
+ git add . && git commit -m"fix for deployment"
+
+
 
 
 
